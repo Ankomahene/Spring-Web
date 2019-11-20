@@ -29,7 +29,28 @@ public class MathsTest {
     }
 
     @Test
-    void subtract() {
+    void subtractPositiveNumbers() {
+        assertEquals(5 , m.sub(8, 3));
+    }
+
+    @Test
+    void subtractNegativeNumbers() {
+        assertEquals(-5 , m.sub(-8, -3));
+    }
+
+    @Test
+    void subtractPositiveAndNegativeNumbers() {
+        assertEquals(11 , m.sub(8, -3));
+    }
+
+    @Test
+    void subtractPositiveAndNegativeNumbers2() {
+        assertEquals(-11 , m.sub(-8, 3));
+    }
+
+    @Test
+    void checkWrongSubResults() {
+        assertNotEquals(-2 , m.sub(5, 3));
     }
 
 }
